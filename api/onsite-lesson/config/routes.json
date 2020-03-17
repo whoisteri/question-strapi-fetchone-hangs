@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/onsite-lessons",
+      "handler": "onsite-lesson.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/onsite-lessons/count",
+      "handler": "onsite-lesson.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/onsite-lessons/:id",
+      "handler": "onsite-lesson.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/onsite-lessons",
+      "handler": "onsite-lesson.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/onsite-lessons/:id",
+      "handler": "onsite-lesson.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/onsite-lessons/:id",
+      "handler": "onsite-lesson.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

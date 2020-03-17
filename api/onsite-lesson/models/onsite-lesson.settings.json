@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "onsite_lessons",
+  "info": {
+    "name": "Onsite Lesson"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "onsite_course": {
+      "via": "onsite_lessons",
+      "model": "onsite-course"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

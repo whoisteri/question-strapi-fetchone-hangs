@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "onsite_courses",
+  "info": {
+    "name": "Onsite Course"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "start_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "city": {
+      "type": "enumeration",
+      "enum": [
+        "Praha",
+        "Brno"
+      ],
+      "required": true
+    },
+    "onsite_lessons": {
+      "collection": "onsite-lesson",
+      "via": "onsite_course"
+    },
+    "number_of_onsite_lessons": {
+      "default": 12,
+      "private": true,
+      "type": "integer",
+      "required": true
+    },
+    "number_of_onsite_projects": {
+      "type": "integer",
+      "private": true,
+      "required": true
+    }
+  }
+}
